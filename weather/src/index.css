@@ -18,8 +18,7 @@ body {
   color: #fff;
 }
 
-.App:before {
-  content: "";
+.App {
   background-image: url("./Components/images/after_noon.png") no-repeat center
     center/cover;
   position: absolute;
@@ -33,4 +32,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.temperarure {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.input {
 }

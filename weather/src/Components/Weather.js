@@ -40,7 +40,7 @@ export default function Weather({ latitude, longitude }) {
     <div>
       {weather.map((item, index) => {
         return (
-          <div>
+          <div className="temperature">
             <p>{Math.round(item.current.temp - 273.15)}° </p>{" "}
             <img
               src={`http://openweathermap.org/img/wn/${item.current.weather[0].icon}@2x.png`}

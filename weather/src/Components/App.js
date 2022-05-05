@@ -47,11 +47,14 @@ function App() {
   return (
     <div className="App">
       <input
+        className="input"
         placeholder="Search for weather"
         type="text"
         onChange={handleChange}
       />
-      <button onClick={handleClick}>Search</button>
+      <button className="btn" onClick={handleClick}>
+        Search
+      </button>
 
       {search ? (
         locations.map((item, index) => {
