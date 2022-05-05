@@ -10,7 +10,7 @@ export default function Location({
   longitude,
 }) {
   return (
-    <div>
+    <div className="in">
       <button className="searchOptions">
         <h3>{name}</h3>
         <h4>
