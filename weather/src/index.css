@@ -29,9 +29,13 @@ body {
 }
 
 .hidden {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.not-found {
+  text-align: center;
 }
 
 .temperarure {
@@ -81,11 +85,9 @@ h1 {
     width: 100px;
   }
   .hidden {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
   }
   .days {
-    margin: 2px;
+    margin: 12px;
   }
 }

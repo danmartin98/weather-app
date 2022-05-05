@@ -47,7 +47,7 @@ function App() {
   return (
     <div className="App">
       <div className="container"></div>
-      <h1>Weater Checker</h1>
+      <h1>Weather Checker</h1>
       <div className="search">
         <input
           className="input"
@@ -76,7 +76,7 @@ function App() {
           );
         })
       ) : (
-        <p>Could not find what you're looking for</p>
+        <p className="not-found">Could not find what you're looking for</p>
       )}
     </div>
   );
