@@ -54,6 +54,8 @@ function App() {
           type="text"
           onChange={handleChange}
         />
+      </div>
+      <div>
         <button className="btn" onClick={handleClick}>
           Search
         </button>
