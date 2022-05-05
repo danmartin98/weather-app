@@ -55,8 +55,8 @@ function App() {
           onChange={handleChange}
         />
       </div>
-      <div>
-        <button className="btn" onClick={handleClick}>
+      <div className="btn">
+        <button className="button" onClick={handleClick}>
           Search
         </button>
       </div>
