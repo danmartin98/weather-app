@@ -1,7 +1,14 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import "./Location.css";
+import Weather from "./Weather";
 
-export default function Location({ name, state, country }) {
+export default function Location({
+  name,
+  state,
+  country,
+  latitude,
+  longitude,
+}) {
   return (
     <div>
       <button className="searchOptions">
@@ -10,6 +17,8 @@ export default function Location({ name, state, country }) {
           {state}, {country}
         </h4>
       </button>
+
+      <Weather latitude={latitude} longitude={longitude} />
     </div>
   );
 }

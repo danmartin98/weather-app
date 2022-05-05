@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Location from "./Location";
+import Weather from "./Weather";
 
 function App() {
   const [input, setInput] = useState(false);
@@ -59,6 +60,8 @@ function App() {
               name={item.name}
               state={item.state}
               country={item.country}
+              latitude={item.lat}
+              longitude={item.lon}
               key={index}
             />
           );
