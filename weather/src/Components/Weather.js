@@ -3,6 +3,15 @@ import { useState, useEffect } from "react";
 export default function Weather({ latitude, longitude }) {
   // State
   const [weather, setWeather] = useState([]);
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
 
   // Get weather based on latitude and longitutde
   useEffect(() => {
@@ -30,14 +39,16 @@ export default function Weather({ latitude, longitude }) {
   return (
     <div>
       {weather.map((item, index) => {
-        return ( 
-        <div>
-        <p>{Math.round(item.current.temp - 273.15)}</p>
-        <div className="hidden">{item.daily.map((item, index) => {
-          return <p>{item.dt}</p>
-        })}</div>
-        </div>
-        )
+        return (
+          <div>
+            <p>{Math.round(item.current.temp - 273.15)}</p>
+            <div className="hidden">
+              {item.daily.map((item, index) => {
+                return <p>{days[new Date(item.dt * 1000).getDay()]}</p>;
+              })}
+            </div>
+          </div>
+        );
       })}
     </div>
   );
