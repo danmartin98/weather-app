@@ -40,32 +40,32 @@ export default function Weather({ latitude, longitude }) {
     <div>
       {weather.map((item, index) => {
         return (
-          <div className="temperature">
-            <p>{Math.round(item.current.temp - 273.15)}° </p>{" "}
+          <div>
+            <p className="temperature">
+              {Math.round(item.current.temp - 273.15)}°{" "}
+            </p>{" "}
             <img
               src={`http://openweathermap.org/img/wn/${item.current.weather[0].icon}@2x.png`}
             ></img>
-            <div className="hidden">
-              {item.daily.map((item, index) => {
-                return (
-                  <>
-                    <p className="days">
-                      {days[new Date(item.dt * 1000).getDay()]}
-                    </p>
-                    <p className="temperature">
-                      Min {Math.round(item.temp.min - 273.15)}° Max{" "}
-                      {Math.round(item.temp.max - 273.15)}°
-                    </p>
-                    <div className="image">
-                      <img
-                        className="weater"
-                        src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}
-                      ></img>
-                    </div>
-                  </>
-                );
-              })}
-            </div>
+            {item.daily.map((item, index) => {
+              return (
+                <div className="hidden">
+                  <p className="days">
+                    {days[new Date(item.dt * 1000).getDay()]}
+                  </p>
+                  <p className="temperature">
+                    Min {Math.round(item.temp.min - 273.15)}° Max{" "}
+                    {Math.round(item.temp.max - 273.15)}°
+                  </p>
+                  <div className="image">
+                    <img
+                      className="weater"
+                      src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}
+                    ></img>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         );
       })}

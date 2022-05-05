@@ -80,4 +80,12 @@ h1 {
   .input {
     width: 100px;
   }
+  .hidden {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .days {
+    margin: 2px;
+  }
 }
