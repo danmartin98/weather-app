@@ -1,0 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Poppins:wght@300;400;500;600&display=swap");
+
+.App {
+  background-image: url("./images/after_noon.png") no-repeat center cover/center;
+}
