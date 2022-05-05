@@ -30,7 +30,14 @@ export default function Weather({ latitude, longitude }) {
   return (
     <div>
       {weather.map((item, index) => {
-        return <p>{item.current.temp - 273.15}</p>;
+        return ( 
+        <div>
+        <p>{Math.round(item.current.temp - 273.15)}</p>
+        <div className="hidden">{item.daily.map((item, index) => {
+          return <p>{item.dt}</p>
+        })}</div>
+        </div>
+        )
       })}
     </div>
   );
