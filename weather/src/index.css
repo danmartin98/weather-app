@@ -36,8 +36,24 @@ body {
 
 .temperarure {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
-.input {
+.input input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 6rem auto;
+  background-color: rgba(255, 255, 255, 0.4);
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  width: 370px;
+  height: 30px;
+  padding: 5px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 2rem;
 }
