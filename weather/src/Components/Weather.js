@@ -17,7 +17,7 @@ export default function Weather({ latitude, longitude }) {
   useEffect(() => {
     async function getWeather() {
       const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=minutely&appid=5ab7c4f0a481e074b3efa77550ec2eea`
+        `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=minutely&appid=75f135af2f925df1d6f03ec5eda12c75`
       );
       const data = await response.json();
 
