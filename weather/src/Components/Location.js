@@ -11,12 +11,12 @@ export default function Location({
 }) {
   return (
     <div className="in">
-      <button className="searchOptions">
+      <div className="searchOptions">
         <h3>{name}</h3>
         <h4>
           {state}, {country}
         </h4>
-      </button>
+      </div>
 
       <Weather latitude={latitude} longitude={longitude} />
     </div>

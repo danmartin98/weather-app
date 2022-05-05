@@ -29,14 +29,27 @@ body {
 }
 
 .hidden {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 17px;
+}
+.temperature {
+  margin: 0 35px;
+  color: #333;
+}
+
+.searchOptions h3,
+h4 {
+  margin: 0 15px;
+  color: #333;
 }
 
 .not-found {
   text-align: center;
 }
 
-.temperarure {
-  text-align: center;
+.temperature {
   font-size: 18px;
   margin: 5px auto;
 }

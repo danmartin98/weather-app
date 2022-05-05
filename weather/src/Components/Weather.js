@@ -41,12 +41,15 @@ export default function Weather({ latitude, longitude }) {
       {weather.map((item, index) => {
         return (
           <div>
-            <p className="temperature">
-              {Math.round(item.current.temp - 273.15)}°{" "}
-            </p>{" "}
-            <img
-              src={`http://openweathermap.org/img/wn/${item.current.weather[0].icon}@2x.png`}
-            ></img>
+            <div>
+              <p className="temperature">
+                {Math.round(item.current.temp - 273.15)}°{" "}
+              </p>{" "}
+              <img
+                className="temperature"
+                src={`http://openweathermap.org/img/wn/${item.current.weather[0].icon}@2x.png`}
+              ></img>
+            </div>
             {item.daily.map((item, index) => {
               return (
                 <div className="hidden">
