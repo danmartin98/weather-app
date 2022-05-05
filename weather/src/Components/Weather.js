@@ -49,14 +49,19 @@ export default function Weather({ latitude, longitude }) {
               {item.daily.map((item, index) => {
                 return (
                   <>
-                    <p>{days[new Date(item.dt * 1000).getDay()]}</p>
-                    <p>
+                    <p className="days">
+                      {days[new Date(item.dt * 1000).getDay()]}
+                    </p>
+                    <p className="temperature">
                       Min {Math.round(item.temp.min - 273.15)}° Max{" "}
                       {Math.round(item.temp.max - 273.15)}°
                     </p>
-                    <img
-                      src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}
-                    ></img>
+                    <div className="image">
+                      <img
+                        className="weater"
+                        src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}
+                      ></img>
+                    </div>
                   </>
                 );
               })}

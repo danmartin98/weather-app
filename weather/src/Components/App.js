@@ -46,19 +46,20 @@ function App() {
 
   return (
     <div className="App">
+      <div className="container"></div>
       <h1>Weater Checker</h1>
-      <div className="input">
+      <div className="search">
         <input
           className="input"
           placeholder="Search for weather"
           type="text"
           onChange={handleChange}
         />
-      </div>
-      <div className="btn">
-        <button className="button" onClick={handleClick}>
-          Search
-        </button>
+        <div className="btn">
+          <button className="button" onClick={handleClick}>
+            Search
+          </button>
+        </div>
       </div>
 
       {search ? (
