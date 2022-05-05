@@ -1,0 +1,9 @@
+.searchOptions {
+  background: #fff;
+  border-color: #fff;
+  border-style: solid;
+}
+
+.searchOptions:hover {
+  cursor: pointer;
+}

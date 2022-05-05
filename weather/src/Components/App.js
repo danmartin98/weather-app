@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
+import Location from "./Location";
 
 function App() {
-  const [input, setInput] = useState("");
-  const [search, setSearch] = useState("");
-  const [weather, setWeather] = useState("");
+  const [input, setInput] = useState(false);
+  const [search, setSearch] = useState(false);
+  const [locations, setLocations] = useState([]);
+  const [weather, setWeather] = useState(false);
   const [latitude, setLatitude] = useState(false);
   const [longitude, setLongitude] = useState(false);
 
@@ -24,8 +26,7 @@ function App() {
       );
       const data = await response.json();
       console.log(data);
-      setLatitude(data[0].lat);
-      setLongitude(data[0].lon);
+      setLocations(data);
     }
     getWeather();
   }, [search]);
@@ -50,6 +51,21 @@ function App() {
         onChange={handleChange}
       />
       <button onClick={handleClick}>Search</button>
+
+      {search ? (
+        locations.map((item, index) => {
+          return (
+            <Location
+              name={item.name}
+              state={item.state}
+              country={item.country}
+              key={index}
+            />
+          );
+        })
+      ) : (
+        <p>Could not find what you're looking for</p>
+      )}
     </div>
   );
 }
